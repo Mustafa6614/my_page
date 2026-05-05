@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mustafa Özyürek</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #faf8f5;
+    --ink: #1a1814;
+    --muted: #7a7470;
+    --subtle: #ede9e3;
+    --accent: #c45c2e;
+    --serif: 'Lora', Georgia, serif;
+    --sans: 'Inter', sans-serif;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .wrap { max-width: 620px; margin: 0 auto; padding: 0 2rem; }
+
+  /* LANG SWITCHER */
+  .lang-switcher {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.5rem;
+    display: flex;
+    gap: 4px;
+    z-index: 100;
+    background: var(--bg);
+    border: 1px solid var(--subtle);
+    border-radius: 100px;
+    padding: 4px;
+  }
+
+  .lang-btn {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 11px;
+    border-radius: 100px;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.18s;
+    letter-spacing: 0.03em;
+  }
+
+  .lang-btn:hover { color: var(--ink); }
+  .lang-btn.active { background: var(--ink); color: var(--bg); }
+
+  /* HERO */
+  .hero { padding: 7rem 0 4rem; }
+
+  .hello {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+  }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.6rem, 7vw, 4rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-text {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 480px;
+    line-height: 1.85;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-text strong { color: var(--ink); font-weight: 500; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: all 0.18s;
+  }
+
+  .chip-email { background: var(--ink); color: var(--bg); }
+  .chip-email:hover { background: #333; }
+  .chip-phone { background: var(--subtle); color: var(--ink); }
+  .chip-phone:hover { background: #e2ddd6; }
+  .chip-cv { border: 1px solid var(--accent); color: var(--accent); }
+  .chip-cv:hover { background: var(--accent); color: var(--bg); }
+
+  .divider { border: none; border-top: 1px solid var(--subtle); margin: 4rem 0; }
+
+  .block { margin-bottom: 4rem; }
+
+  .label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+  }
+
+  .block p { font-size: 1rem; color: var(--muted); line-height: 1.9; margin-bottom: 1rem; }
+  .block p:last-child { margin-bottom: 0; }
+  .block p strong { color: var(--ink); font-weight: 500; }
+
+  /* SKILLS */
+  .skill-line {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--subtle);
+  }
+  .skill-line:first-of-type { border-top: 1px solid var(--subtle); }
+  .skill-cat { font-size: 13px; font-weight: 500; color: var(--ink); min-width: 130px; flex-shrink: 0; }
+  .skill-items { font-size: 13px; color: var(--muted); }
+
+  /* TIMELINE */
+  .tl-item { display: flex; gap: 1.5rem; padding-bottom: 2.5rem; position: relative; }
+  .tl-item::before {
+    content: ''; position: absolute; left: 4px; top: 18px; bottom: 0;
+    width: 1px; background: var(--subtle);
+  }
+  .tl-item:last-child::before { display: none; }
+  .tl-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); flex-shrink: 0; margin-top: 6px; position: relative; z-index: 1; }
+  .tl-dot.muted { background: #ccc; }
+  .tl-dot.future {
+    background: var(--bg);
+    border: 2px solid var(--accent);
+    width: 11px;
+    height: 11px;
+  }
+
+  /* AVATAR */
+  .avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--subtle);
+    color: var(--accent);
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-meta {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    font-family: var(--sans);
+  }
+  .tl-body { flex: 1; }
+  .tl-year { font-size: 12px; color: var(--muted); margin-bottom: 3px; font-weight: 500; }
+  .tl-title { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); margin-bottom: 2px; line-height: 1.3; }
+  .tl-where { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .tl-desc { font-size: 13.5px; color: var(--muted); line-height: 1.7; }
+
+  /* LANG ROWS */
+  .lang-row { display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid var(--subtle); font-size: 14px; }
+  .lang-row:first-of-type { border-top: 1px solid var(--subtle); }
+  .lang-name { color: var(--ink); font-weight: 500; }
+  .lang-level { color: var(--muted); }
+
+  /* FOOTER */
+  footer { padding: 3rem 0 5rem; text-align: center; }
+  .footer-text { font-family: var(--serif); font-style: italic; font-size: 1rem; color: var(--muted); margin-bottom: 0.5rem; }
+  .footer-email { font-size: 13px; color: var(--accent); text-decoration: none; }
+  .footer-email:hover { text-decoration: underline; }
+  .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; }
+
+  /* ANIMATIONS */
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+  .hero  { animation: fadeIn 0.7s ease both; }
+  .block { animation: fadeIn 0.7s 0.1s ease both; }
+
+  @keyframes langSwitch { from { opacity: 0; } to { opacity: 1; } }
+  .wrap { animation: langSwitch 0.25s ease both; }
+
+  @media (max-width: 500px) {
+    .skill-line { flex-direction: column; gap: 4px; }
+    .skill-cat { min-width: unset; }
+    .lang-switcher { top: 0.75rem; right: 0.75rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- LANGUAGE SWITCHER -->
+<div class="lang-switcher">
+  <button class="lang-btn active" onclick="setLang('en')">EN</button>
+  <button class="lang-btn" onclick="setLang('it')">IT</button>
+  <button class="lang-btn" onclick="setLang('tr')">TR</button>
+</div>
+
+<div class="wrap" id="main">
+  <!-- content injected by JS -->
+</div>
+
+<script>
+const t = {
+  en: {
+    hello: "Hi, I'm",
+    heroText: `I'm a <strong>Computer Science student</strong> at USI in Switzerland, finishing my Bachelor's in 2026. I like building things — from backend systems to interfaces — and I'm drawn to <strong>AI-integrated applications</strong> and well-structured software.`,
+    whoLabel: "Who I am",
+    who1: `I got into Computer Science the way a lot of people my age did — through <strong>video games</strong>. I was always the one taking apart settings menus, curious about what was running underneath. That curiosity never really left, it just turned into a degree.`,
+    who2: `Outside of code I travel when I can, play football, hit the gym, and enjoy slow evenings — bowling, a good film, dinner with friends. I grew up speaking <strong>Turkish and Italian</strong>, which means I'm used to switching between worlds. English too, so no barriers there.`,
+    skillsLabel: "What I work with",
+    cat1: "Languages", cat2: "Frontend", cat3: "Backend & DB", cat4: "Tools",
+    timelineLabel: "Where I've been",
+    tl: [
+      { year: "2026 → planned", title: "MSc Software Engineering with AI", where: "Università della Svizzera Italiana", desc: "Planning to continue at USI with a Master's focused on AI and software engineering.", future: true },
+      { year: "2022 → Jun 2026", title: "Bachelor of Computer Science", where: "Università della Svizzera Italiana", desc: "Finishing up — expected graduation June 2026.", future: true },
+      { year: "2025", title: "Industry Internship — AnswerConsulting", where: "Software Atelier 5, USI", desc: "AI-driven automation for enterprise content management. Built frontend components with JavaScript and SmartUI, integrated AI services, handled API communication with a Groovy backend.", future: false },
+      { year: "2017 → 2022", title: "Swiss Commercial Matura + VET Diploma (EFZ)", where: "Scuola cantonale di Commercio", desc: "", future: false },
+      { year: "2016", title: "Office Assistant Internship — AMAG / Volkswagen", where: "", desc: "Administrative support, documentation, and customer service.", future: false },
+    ],
+    langLabel: "Languages",
+    langs: [["Turkish","Native"],["Italian","Native"],["English","Advanced"]],
+    footerText: "Want to get in touch?",
+    cvLabel: "↓ Download CV",
+    igHandle: "@_mustafaa_66",
+    phoneLabel: "+41 76 246 25 76",
+  },
+  it: {
+    hello: "Ciao, sono",
+    heroText: `Sono uno <strong>studente di Informatica</strong> all'USI in Svizzera, in procinto di laurearmi nel 2026. Mi piace costruire cose — da sistemi backend a interfacce — e sono particolarmente attratto dalle <strong>applicazioni integrate con l'AI</strong> e dal software ben strutturato.`,
+    whoLabel: "Chi sono",
+    who1: `Mi sono avvicinato all'informatica come molti della mia generazione — attraverso i <strong>videogiochi</strong>. Ero sempre quello che smontava i menu delle impostazioni, curioso di capire cosa ci fosse sotto. Quella curiosità non mi ha mai abbandonato, si è solo trasformata in una laurea.`,
+    who2: `Al di fuori del codice viaggio quando posso, gioco a calcio, vado in palestra e amo le serate tranquille — bowling, un bel film, una cena con gli amici. Sono cresciuto parlando <strong>turco e italiano</strong>, il che mi rende abituato a passare da un mondo all'altro. Anche l'inglese, quindi nessuna barriera.`,
+    skillsLabel: "Con cosa lavoro",
+    cat1: "Linguaggi", cat2: "Frontend", cat3: "Backend & DB", cat4: "Strumenti",
+    timelineLabel: "Il mio percorso",
+    tl: [
+      { year: "2026 → pianificato", title: "MSc Ingegneria del Software con AI", where: "Università della Svizzera Italiana", desc: "Intendo continuare all'USI con un Master focalizzato su AI e ingegneria del software.", future: true },
+      { year: "2022 → giu 2026", title: "Bachelor in Informatica", where: "Università della Svizzera Italiana", desc: "In fase di completamento — laurea prevista a giugno 2026.", future: true },
+      { year: "2025", title: "Stage industriale — AnswerConsulting", where: "Software Atelier 5, USI", desc: "Automazione basata su AI per la gestione di contenuti aziendali. Sviluppo di componenti frontend con JavaScript e SmartUI, integrazione di servizi AI nell'interfaccia, gestione della comunicazione API con un backend Groovy.", future: false },
+      { year: "2017 → 2022", title: "Maturità Commerciale Svizzera + Diploma AFC", where: "Scuola cantonale di Commercio", desc: "", future: false },
+      { year: "2016", title: "Stage come Assistente d'ufficio — AMAG / Volkswagen", where: "", desc: "Supporto amministrativo, gestione documentale e assistenza clienti.", future: false },
+    ],
+    langLabel: "Lingue",
+    langs: [["Turco","Madrelingua"],["Italiano","Madrelingua"],["Inglese","Avanzato"]],
+    footerText: "Vuoi contattarmi?",
+    cvLabel: "↓ Scarica CV",
+    igHandle: "@_mustafaa_66",
+    phoneLabel: "+41 76 246 25 76",
+  },
+  tr: {
+    hello: "Merhaba, ben",
+    heroText: `İsviçre'deki USI'de <strong>Bilgisayar Bilimleri öğrencisiyim</strong> ve lisans eğitimimi 2026'da tamamlıyorum. Backend sistemlerinden arayüzlere kadar bir şeyler inşa etmeyi seviyorum; özellikle <strong>yapay zeka entegreli uygulamalara</strong> ve iyi yapılandırılmış yazılımlara ilgi duyuyorum.`,
+    whoLabel: "Ben kimim",
+    who1: `Bilgisayar Bilimleri'ne neslimdeki pek çok kişi gibi <strong>video oyunları</strong> aracılığıyla girdim. Her zaman ayarlar menülerini söküp açan, altta ne çalıştığını merak eden biri oldum. Bu merak hiç gitmedi, sadece bir dereceye dönüştü.`,
+    who2: `Kod dışında fırsattım oldukça seyahat ederim, futbol oynarım, spor salonuna giderim ve sakin akşamlardan hoşlanırım — bowling, iyi bir film, arkadaşlarla yemek. <strong>Türkçe ve İtalyanca</strong> konuşarak büyüdüm, bu da farklı dünyalar arasında geçiş yapmaya alışkın olduğum anlamına geliyor. İngilizce de var, yani hiçbir engel yok.`,
+    skillsLabel: "Nelerle çalışıyorum",
+    cat1: "Diller", cat2: "Frontend", cat3: "Backend & DB", cat4: "Araçlar",
+    timelineLabel: "Nerede bulundum",
+    tl: [
+      { year: "2026 → planlanan", title: "Yüksek Lisans: Yapay Zeka ile Yazılım Mühendisliği", where: "Università della Svizzera Italiana", desc: "Yapay zeka ve yazılım mühendisliği odaklı yüksek lisansı USI'de yapmayı planlıyorum.", future: true },
+      { year: "2022 → Haz 2026", title: "Bilgisayar Bilimleri Lisansı", where: "Università della Svizzera Italiana", desc: "Tamamlanma aşamasında — beklenen mezuniyet Haziran 2026.", future: true },
+      { year: "2025", title: "Endüstri Stajı — AnswerConsulting", where: "Software Atelier 5, USI", desc: "Kurumsal içerik yönetimi için yapay zeka destekli otomasyon. JavaScript ve SmartUI ile frontend bileşenleri geliştirdim, yapay zeka servislerini entegre ettim, Groovy tabanlı backend ile API iletişimini yönettim.", future: false },
+      { year: "2017 → 2022", title: "İsviçre Ticaret Olgunluk Belgesi + VET Diploması (EFZ)", where: "Scuola cantonale di Commercio", desc: "", future: false },
+      { year: "2016", title: "Ofis Asistanı Stajı — AMAG / Volkswagen", where: "", desc: "İdari destek, belge yönetimi ve müşteri hizmetleri.", future: false },
+    ],
+    langLabel: "Diller",
+    langs: [["Türkçe","Anadil"],["İtalyanca","Anadil"],["İngilizce","İleri Seviye"]],
+    footerText: "İletişime geçmek ister misin?",
+    cvLabel: "↓ CV İndir",
+    igHandle: "@_mustafaa_66",
+    phoneLabel: "+41 76 246 25 76",
+  }
+};
+
+let currentLang = 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent === lang.toUpperCase()));
+  render(lang);
+}
+
+function render(lang) {
+  const l = t[lang];
+
+  const timelineHTML = l.tl.map((item) => `
+    <div class="tl-item">
+      <div class="tl-dot${item.future ? ' future' : (!item.desc && !item.where ? ' muted' : '')}"></div>
+      <div class="tl-body">
+        <div class="tl-year">${item.year}</div>
+        <div class="tl-title">${item.title}</div>
+        ${item.where ? `<div class="tl-where">${item.where}</div>` : ''}
+        ${item.desc ? `<div class="tl-desc">${item.desc}</div>` : ''}
+      </div>
+    </div>
+  `).join('');
+
+  const langsHTML = l.langs.map(([name, level]) => `
+    <div class="lang-row">
+      <span class="lang-name">${name}</span>
+      <span class="lang-level">${level}</span>
+    </div>
+  `).join('');
+
+  document.getElementById('main').innerHTML = `
+    <div class="hero">
+      <div class="avatar">MÖ</div>
+      <div class="hero-meta">📍 Switzerland</div>
+      <p class="hello">${l.hello}</p>
+      <h1>Mustafa Özyürek</h1>
+      <p class="hero-text">${l.heroText}</p>
+      <div class="chips">
+        <a class="chip chip-email" href="mailto:mustafaaozyurek@hotmail.com">✉ mustafaaozyurek@hotmail.com</a>
+        <a class="chip chip-phone" href="tel:+41762462576">+41 76 246 25 76</a>
+        <a class="chip chip-cv" href="CV_Mustafa_Ozyurek.pdf" target="_blank">${l.cvLabel}</a>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="block">
+      <div class="label">${l.whoLabel}</div>
+      <p>${l.who1}</p>
+      <p>${l.who2}</p>
+    </div>
+
+    <div class="block">
+      <div class="label">${l.skillsLabel}</div>
+      <div class="skill-line"><span class="skill-cat">${l.cat1}</span><span class="skill-items">Java, Python, C, C++, JavaScript, SQL</span></div>
+      <div class="skill-line"><span class="skill-cat">${l.cat2}</span><span class="skill-items">HTML, CSS, JavaScript, SmartUI / SmartPages</span></div>
+      <div class="skill-line"><span class="skill-cat">${l.cat3}</span><span class="skill-items">Spring Boot, Node.js, MongoDB, REST APIs</span></div>
+      <div class="skill-line"><span class="skill-cat">${l.cat4}</span><span class="skill-items">Git</span></div>
+    </div>
+
+    <div class="block">
+      <div class="label">${l.timelineLabel}</div>
+      ${timelineHTML}
+    </div>
+
+    <div class="block">
+      <div class="label">${l.langLabel}</div>
+      ${langsHTML}
+    </div>
+
+    <footer>
+      <p class="footer-text">${l.footerText}</p>
+      <div class="footer-links">
+        <a class="footer-email" href="mailto:mustafaaozyurek@hotmail.com">✉ mustafaaozyurek@hotmail.com</a>
+        <a class="footer-email" href="https://www.instagram.com/_mustafaa_66/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:5px"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>${l.igHandle}</a>
+        <a class="footer-email" href="tel:+41762462576">📞 ${l.phoneLabel}</a>
+      </div>
+    </footer>
+  `;
+}
+
+render('en');
+</script>
+</body>
+</html>
