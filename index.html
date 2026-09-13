@@ -150,7 +150,8 @@
   .tl-item:last-child::before { display: none; }
   .tl-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); flex-shrink: 0; margin-top: 6px; position: relative; z-index: 1; }
   .tl-dot.muted { background: #ccc; }
-  .tl-dot.future {
+  .tl-dot.future,
+  .tl-dot.current {
     background: var(--bg);
     border: 2px solid var(--accent);
     width: 11px;
@@ -231,7 +232,7 @@
 const t = {
   en: {
     hello: "Hi, I'm",
-    heroText: `I'm a <strong>Computer Science student</strong> at USI in Switzerland, finishing my Bachelor's in 2026. I like building things — from backend systems to interfaces — and I'm drawn to <strong>AI-integrated applications</strong> and well-structured software.`,
+    heroText: `I hold a <strong>Bachelor's degree in Computer Science</strong> from USI in Switzerland and am currently pursuing a <strong>Master's in Software Engineering with AI</strong> at the same university. I like building things — from backend systems to interfaces — and I'm drawn to AI-integrated applications and well-structured software.`,
     whoLabel: "Who I am",
     who1: `I got into Computer Science the way a lot of people my age did — through <strong>video games</strong>. I was always the one taking apart settings menus, curious about what was running underneath. That curiosity never really left, it just turned into a degree.`,
     who2: `Outside of code I travel when I can, play football, hit the gym, and enjoy slow evenings — bowling, a good film, dinner with friends. I grew up speaking <strong>Turkish and Italian</strong>, which means I'm used to switching between worlds. English too, so no barriers there.`,
@@ -239,8 +240,8 @@ const t = {
     cat1: "Languages", cat2: "Frontend", cat3: "Backend & DB", cat4: "Tools",
     timelineLabel: "Where I've been",
     tl: [
-      { year: "2026 → planned", title: "MSc Software Engineering with AI", where: "Università della Svizzera Italiana", desc: "Planning to continue at USI with a Master's focused on AI and software engineering.", future: true },
-      { year: "2022 → Jun 2026", title: "Bachelor of Computer Science", where: "Università della Svizzera Italiana", desc: "Finishing up — expected graduation June 2026.", future: true },
+      { year: "Sep 2026 → present", title: "MSc Software Engineering with AI", where: "Università della Svizzera Italiana", desc: "Currently pursuing a Master's focused on software engineering and artificial intelligence.", current: true },
+      { year: "2022 → 2026", title: "Bachelor of Computer Science", where: "Università della Svizzera Italiana", desc: "Completed my Bachelor's degree in Computer Science in 2026.", future: false },
       { year: "2025 → 2026", title: "Bachelor Thesis — Autonomous Vehicle Simulation", where: "Università della Svizzera Italiana", desc: "Identifying human driving anomalies from real-world incidents for autonomous vehicle simulation. Integrated large language models for anomaly classification and scenario generation.", future: false },
       { year: "2025", title: "Industry Internship — AnswerConsulting", where: "Software Atelier 5, USI", desc: "AI-driven automation for enterprise content management. Built frontend components with JavaScript and SmartUI, integrated AI services, handled API communication with a Groovy backend.", future: false },
       { year: "2017 → 2022", title: "Swiss Commercial Matura + VET Diploma (EFZ)", where: "Scuola cantonale di Commercio", desc: "", future: false },
@@ -255,7 +256,7 @@ const t = {
   },
   it: {
     hello: "Ciao, sono",
-    heroText: `Sono uno <strong>studente di Informatica</strong> all'USI in Svizzera, in procinto di laurearmi nel 2026. Mi piace costruire cose — da sistemi backend a interfacce — e sono particolarmente attratto dalle <strong>applicazioni integrate con l'AI</strong> e dal software ben strutturato.`,
+    heroText: `Ho conseguito il <strong>Bachelor in Informatica</strong> all'USI in Svizzera e attualmente frequento il <strong>Master in Software Engineering with AI</strong>, sempre all'USI. Mi piace costruire cose — da sistemi backend a interfacce — e sono particolarmente attratto dalle applicazioni integrate con l'AI e dal software ben strutturato.`,
     whoLabel: "Chi sono",
     who1: `Mi sono avvicinato all'informatica come molti della mia generazione — attraverso i <strong>videogiochi</strong>. Ero sempre quello che smontava i menu delle impostazioni, curioso di capire cosa ci fosse sotto. Quella curiosità non mi ha mai abbandonato, si è solo trasformata in una laurea.`,
     who2: `Al di fuori del codice viaggio quando posso, gioco a calcio, vado in palestra e amo le serate tranquille — bowling, un bel film, una cena con gli amici. Sono cresciuto parlando <strong>turco e italiano</strong>, il che mi rende abituato a passare da un mondo all'altro. Anche l'inglese, quindi nessuna barriera.`,
@@ -263,8 +264,8 @@ const t = {
     cat1: "Linguaggi", cat2: "Frontend", cat3: "Backend & DB", cat4: "Strumenti",
     timelineLabel: "Il mio percorso",
     tl: [
-      { year: "2026 → pianificato", title: "MSc Ingegneria del Software con AI", where: "Università della Svizzera Italiana", desc: "Intendo continuare all'USI con un Master focalizzato su AI e ingegneria del software.", future: true },
-      { year: "2022 → giu 2026", title: "Bachelor in Informatica", where: "Università della Svizzera Italiana", desc: "In fase di completamento — laurea prevista a giugno 2026.", future: true },
+      { year: "Set 2026 → presente", title: "MSc Software Engineering with AI", where: "Università della Svizzera Italiana", desc: "Attualmente frequento il Master, focalizzato sull'ingegneria del software e sull'intelligenza artificiale.", current: true },
+      { year: "2022 → 2026", title: "Bachelor in Informatica", where: "Università della Svizzera Italiana", desc: "Bachelor in Informatica completato nel 2026.", future: false },
       { year: "2025 → 2026", title: "Tesi di Bachelor — Simulazione di Veicoli Autonomi", where: "Università della Svizzera Italiana", desc: "Identificazione di anomalie nella guida umana da incidenti reali per la simulazione di veicoli autonomi. Integrazione di modelli linguistici di grandi dimensioni per la classificazione delle anomalie e la generazione di scenari.", future: false },
       { year: "2025", title: "Stage industriale — AnswerConsulting", where: "Software Atelier 5, USI", desc: "Automazione basata su AI per la gestione di contenuti aziendali. Sviluppo di componenti frontend con JavaScript e SmartUI, integrazione di servizi AI nell'interfaccia, gestione della comunicazione API con un backend Groovy.", future: false },
       { year: "2017 → 2022", title: "Maturità Commerciale Svizzera + Diploma AFC", where: "Scuola cantonale di Commercio", desc: "", future: false },
@@ -279,7 +280,7 @@ const t = {
   },
   tr: {
     hello: "Merhaba, ben",
-    heroText: `İsviçre'deki USI'de <strong>Bilgisayar Bilimleri öğrencisiyim</strong> ve lisans eğitimimi 2026'da tamamlıyorum. Backend sistemlerinden arayüzlere kadar bir şeyler inşa etmeyi seviyorum; özellikle <strong>yapay zeka entegreli uygulamalara</strong> ve iyi yapılandırılmış yazılımlara ilgi duyuyorum.`,
+    heroText: `İsviçre'deki USI'de <strong>Bilgisayar Bilimleri lisans eğitimimi tamamladım</strong> ve şu anda aynı üniversitede <strong>Software Engineering with AI yüksek lisansına</strong> devam ediyorum. Backend sistemlerinden arayüzlere kadar bir şeyler geliştirmeyi seviyorum; özellikle yapay zeka entegreli uygulamalara ve iyi yapılandırılmış yazılımlara ilgi duyuyorum.`,
     whoLabel: "Ben kimim",
     who1: `Bilgisayar Bilimleri'ne neslimdeki pek çok kişi gibi <strong>video oyunları</strong> aracılığıyla girdim. Her zaman ayarlar menülerini söküp açan, altta ne çalıştığını merak eden biri oldum. Bu merak hiç gitmedi, sadece bir dereceye dönüştü.`,
     who2: `Kod dışında fırsattım oldukça seyahat ederim, futbol oynarım, spor salonuna giderim ve sakin akşamlardan hoşlanırım — bowling, iyi bir film, arkadaşlarla yemek. <strong>Türkçe ve İtalyanca</strong> konuşarak büyüdüm, bu da farklı dünyalar arasında geçiş yapmaya alışkın olduğum anlamına geliyor. İngilizce de var, yani hiçbir engel yok.`,
@@ -287,8 +288,8 @@ const t = {
     cat1: "Diller", cat2: "Frontend", cat3: "Backend & DB", cat4: "Araçlar",
     timelineLabel: "Nerede bulundum",
     tl: [
-      { year: "2026 → planlanan", title: "Yüksek Lisans: Yapay Zeka ile Yazılım Mühendisliği", where: "Università della Svizzera Italiana", desc: "Yapay zeka ve yazılım mühendisliği odaklı yüksek lisansı USI'de yapmayı planlıyorum.", future: true },
-      { year: "2022 → Haz 2026", title: "Bilgisayar Bilimleri Lisansı", where: "Università della Svizzera Italiana", desc: "Tamamlanma aşamasında — beklenen mezuniyet Haziran 2026.", future: true },
+      { year: "Eyl 2026 → günümüz", title: "MSc Software Engineering with AI", where: "Università della Svizzera Italiana", desc: "Şu anda yazılım mühendisliği ve yapay zeka odaklı yüksek lisans eğitimime devam ediyorum.", current: true },
+      { year: "2022 → 2026", title: "Bilgisayar Bilimleri Lisansı", where: "Università della Svizzera Italiana", desc: "Bilgisayar Bilimleri lisans eğitimimi 2026 yılında tamamladım.", future: false },
       { year: "2025 → 2026", title: "Lisans Tezi — Otonom Araç Simülasyonu", where: "Università della Svizzera Italiana", desc: "Otonom araç simülasyonu için gerçek dünya olaylarından anormal insan sürüş davranışlarının tespiti. Anomali sınıflandırması ve senaryo üretimi için büyük dil modelleri entegre edildi.", future: false },
       { year: "2025", title: "Endüstri Stajı — AnswerConsulting", where: "Software Atelier 5, USI", desc: "Kurumsal içerik yönetimi için yapay zeka destekli otomasyon. JavaScript ve SmartUI ile frontend bileşenleri geliştirdim, yapay zeka servislerini entegre ettim, Groovy tabanlı backend ile API iletişimini yönettim.", future: false },
       { year: "2017 → 2022", title: "İsviçre Ticaret Olgunluk Belgesi + VET Diploması (EFZ)", where: "Scuola cantonale di Commercio", desc: "", future: false },
@@ -316,7 +317,7 @@ function render(lang) {
 
   const timelineHTML = l.tl.map((item) => `
     <div class="tl-item">
-      <div class="tl-dot${item.future ? ' future' : (!item.desc && !item.where ? ' muted' : '')}"></div>
+      <div class="tl-dot${item.current ? ' current' : (item.future ? ' future' : (!item.desc && !item.where ? ' muted' : ''))}"></div>
       <div class="tl-body">
         <div class="tl-year">${item.year}</div>
         <div class="tl-title">${item.title}</div>
