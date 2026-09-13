@@ -251,6 +251,7 @@ const t = {
     langs: [["Turkish","Native"],["Italian","Native"],["English","Advanced"]],
     footerText: "Want to get in touch?",
     cvLabel: "↓ Download CV",
+    cvFile: "CV_Mustafa_Özyürek_EN.pdf",
     igHandle: "@_mustafaa_66",
     phoneLabel: "+41 76 246 25 76",
   },
@@ -264,7 +265,7 @@ const t = {
     cat1: "Linguaggi", cat2: "Frontend", cat3: "Backend & DB", cat4: "Strumenti",
     timelineLabel: "Il mio percorso",
     tl: [
-      { year: "Set 2026 → presente", title: "MSc Software Engineering with AI", where: "Università della Svizzera Italiana", desc: "Attualmente frequento il Master, focalizzato sull'ingegneria del software e sull'intelligenza artificiale.", current: true },
+      { year: "set 2026 → presente", title: "MSc Software Engineering with AI", where: "Università della Svizzera Italiana", desc: "Attualmente frequento il Master, focalizzato sull'ingegneria del software e sull'intelligenza artificiale.", current: true },
       { year: "2022 → 2026", title: "Bachelor in Informatica", where: "Università della Svizzera Italiana", desc: "Bachelor in Informatica completato nel 2026.", future: false },
       { year: "2025 → 2026", title: "Tesi di Bachelor — Simulazione di Veicoli Autonomi", where: "Università della Svizzera Italiana", desc: "Identificazione di anomalie nella guida umana da incidenti reali per la simulazione di veicoli autonomi. Integrazione di modelli linguistici di grandi dimensioni per la classificazione delle anomalie e la generazione di scenari.", future: false },
       { year: "2025", title: "Stage industriale — AnswerConsulting", where: "Software Atelier 5, USI", desc: "Automazione basata su AI per la gestione di contenuti aziendali. Sviluppo di componenti frontend con JavaScript e SmartUI, integrazione di servizi AI nell'interfaccia, gestione della comunicazione API con un backend Groovy.", future: false },
@@ -275,6 +276,7 @@ const t = {
     langs: [["Turco","Madrelingua"],["Italiano","Madrelingua"],["Inglese","Avanzato"]],
     footerText: "Vuoi contattarmi?",
     cvLabel: "↓ Scarica CV",
+    cvFile: "CV_Mustafa_Özyürek_IT.pdf",
     igHandle: "@_mustafaa_66",
     phoneLabel: "+41 76 246 25 76",
   },
@@ -299,6 +301,7 @@ const t = {
     langs: [["Türkçe","Anadil"],["İtalyanca","Anadil"],["İngilizce","İleri Seviye"]],
     footerText: "İletişime geçmek ister misin?",
     cvLabel: "↓ CV İndir",
+    cvFile: "CV_Mustafa_Özyürek_EN.pdf",
     igHandle: "@_mustafaa_66",
     phoneLabel: "+41 76 246 25 76",
   }
@@ -344,7 +347,7 @@ function render(lang) {
       <div class="chips">
         <a class="chip chip-email" href="mailto:mustafaaozyurek@hotmail.com">✉ mustafaaozyurek@hotmail.com</a>
         <a class="chip chip-phone" href="tel:+41762462576">+41 76 246 25 76</a>
-        <a class="chip chip-cv" href="CV_Mustafa_Özyürek_EN.pdf" target="_blank">${l.cvLabel}</a>
+        <a class="chip chip-cv" href="${l.cvFile}" target="_blank">${l.cvLabel}</a>
       </div>
     </div>
 
