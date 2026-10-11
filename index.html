@@ -1,234 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mustafa Özyürek</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Mustafa Özyürek — Software engineering, artificial intelligence and thoughtful digital experiences."><meta name="theme-color" content="#f4f1e9"><title>Mustafa Özyürek — Software & AI</title><style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+:root{--bg:#f4f1e9;--ink:#31392f;--muted:#777c70;--line:#d9dbcf;--accent:#657454;--serif:'Instrument Serif',Georgia,serif}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',Arial,sans-serif}a{color:inherit}button{font:inherit;cursor:pointer}header{height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 5%;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10;background:#f4f1e9ed;backdrop-filter:blur(16px)}.brand{font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap}.brand span{display:block;font-size:10px;font-weight:400;color:var(--muted);letter-spacing:1.6px;margin-top:4px}nav{display:flex;gap:6px}nav a{font-size:12px;padding:10px 14px;border-radius:30px;text-decoration:none}nav a:hover,nav a.active{background:var(--ink);color:var(--bg)}.languages{display:flex;gap:3px}.languages button{border:0;background:transparent;color:var(--muted);padding:8px;font-size:11px;border-radius:50%}.languages button.active{background:var(--ink);color:var(--bg)}section{padding:110px 7%;border-bottom:1px solid var(--line);scroll-margin-top:10px}.hero{height:calc(100svh - 88px);min-height:660px;max-height:1000px;position:relative;overflow:hidden;padding:40px 5%}.hero-word{position:absolute;top:35px;left:3%;width:94%;text-align:center;font-size:clamp(100px,19vw,290px);letter-spacing:-.09em;line-height:1;font-weight:500;color:#e1e3d7;white-space:nowrap;user-select:none}.hero-portrait{position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:85%;max-width:44%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 20px 28px #2531210d);animation:appear 1.2s ease both}.hero-copy{position:absolute;bottom:90px;left:6%;max-width:33%;z-index:2}.eyebrow{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:0 0 20px;display:flex;align-items:center;gap:10px}.eyebrow:before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent)}h1{font-size:clamp(40px,5.2vw,78px);font-weight:500;line-height:1.02;letter-spacing:-3px;margin:0 0 24px}h1 em,h2 em,.contact em{font-family:var(--serif);font-weight:400}.hero-copy p:not(.eyebrow){font-size:13px;line-height:1.8;color:var(--muted);max-width:300px}.hero-aside{position:absolute;right:6%;bottom:130px;max-width:21%;font-size:12px;line-height:1.8}.hero-aside .meta{border-top:1px solid var(--line);padding:16px 0;color:var(--muted)}.hero-aside b{display:block;color:var(--ink);font-weight:500}.pill{display:inline-flex;padding:12px 22px;border:1px solid var(--ink);border-radius:30px;text-decoration:none;font-size:12px;gap:18px;align-items:center;transition:.2s}.pill.dark{background:var(--ink);color:var(--bg)}.pill:hover{background:var(--accent);color:var(--bg);border-color:var(--accent);transform:translateY(-2px)}.hero-bottom{position:absolute;bottom:22px;left:6%;right:6%;display:flex;justify-content:space-between;font-size:10px;color:var(--muted);letter-spacing:1px}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:55px}h2{font-size:clamp(36px,5vw,68px);font-weight:500;letter-spacing:-2px;line-height:1.08;margin:0}.section-number{font-size:11px;color:var(--muted)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:9%}.about-grid p{font-size:16px;line-height:1.95;color:var(--muted);margin:0 0 20px}.about-grid strong{color:var(--ink);font-weight:500}.about-note{font-family:var(--serif);font-size:40px;line-height:1.2;margin:35px 0}.lang-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}.lang-list span{border:1px solid var(--line);border-radius:30px;padding:10px 15px;font-size:11px}.lang-list small{color:var(--muted);margin-left:8px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}.filters button{border:1px solid var(--line);border-radius:30px;background:transparent;padding:9px 18px;font-size:12px;color:var(--muted)}.filters button.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}.periodic{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.element{min-height:142px;position:relative;border:1px solid var(--line);border-radius:10px;background:#edeedfa6;padding:17px;text-align:left;color:var(--ink);transition:.25s}.element:hover,.element.selected{background:var(--ink);color:var(--bg);transform:translateY(-4px)}.element.dim{opacity:.2}.element small{display:block;font-size:9px;opacity:.6}.element b{font-size:36px;font-weight:500;display:block;margin:10px 0 4px;letter-spacing:-1px}.element span{font-size:11px}.skill-detail{min-height:60px;font-size:13px;color:var(--muted);padding-top:22px;line-height:1.7}.projects{display:grid;grid-template-columns:1fr 1fr;gap:24px}.project{border:1px solid var(--line);border-radius:18px;overflow:hidden}.project-art{height:245px;background:#e4e7da;position:relative;overflow:hidden;padding:30px;display:flex;align-items:center;justify-content:center}.road{width:80%;height:180px;background:#c9cdbd;transform:rotate(-14deg);border-radius:20px;position:relative;box-shadow:0 0 0 18px #d4d8ca}.road:before{content:'';position:absolute;top:49%;width:100%;border-top:3px dashed #f4f1e9}.car{position:absolute;top:24%;left:30%;width:58px;height:28px;border-radius:9px;background:var(--ink);box-shadow:0 5px 12px #0002;animation:drive 7s ease-in-out infinite}.car:after{content:'';position:absolute;inset:-24px;border:1px solid #65745480;border-radius:50%}.road-tag{position:absolute;right:25px;bottom:20px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 15px;font-size:10px}.flow{width:85%;display:flex;flex-direction:column;gap:13px;align-items:center}.flow span{font-size:12px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px 20px;width:85%;text-align:center}.flow .ai{background:var(--ink);color:var(--bg);width:65%}.flow i{height:15px;border-left:1px solid var(--accent)}.project-body{padding:30px}.project-body small{color:var(--muted);font-size:10px;letter-spacing:1px}.project h3{font-size:25px;letter-spacing:-.7px;font-weight:500;line-height:1.25;margin:18px 0}.project p{font-size:13px;line-height:1.85;color:var(--muted)}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:22px}.tags span{border:1px solid var(--line);border-radius:20px;padding:6px 12px;font-size:10px}.timeline{max-width:900px;margin-left:auto}.entry{display:grid;grid-template-columns:180px 1fr;gap:35px;padding:32px 0;border-top:1px solid var(--line)}.entry .year{font-size:13px;color:var(--muted)}.entry h3{font-size:23px;font-weight:500;letter-spacing:-.6px;margin:0 0 8px}.entry p{font-size:13px;line-height:1.8;color:var(--muted);margin:10px 0 0}.entry small{color:var(--accent)}.contact{padding-bottom:65px}.contact h2{font-size:clamp(48px,8vw,110px);max-width:900px;margin-bottom:40px}.contact-actions{display:flex;gap:12px;flex-wrap:wrap}.contact-bottom{margin-top:70px;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:11px}.contact-bottom a{text-decoration:none}.reveal{animation:appear .8s ease both}a:focus-visible,button:focus-visible{outline:3px solid #a1834f;outline-offset:4px}@keyframes appear{from{opacity:0;translate:0 20px}to{opacity:1;translate:0 0}}@keyframes drive{0%,100%{left:25%}50%{left:60%}}@media(min-width:1600px){main{max-width:1800px;margin:auto}}@media(max-width:900px){header{padding:0 4%;gap:10px}nav a{padding:8px;font-size:11px}.hero{min-height:700px}.hero-copy{max-width:40%;bottom:100px}.hero-portrait{left:65%;max-width:52%;height:75%}.hero-aside{display:none}.periodic{grid-template-columns:repeat(4,1fr)}section{padding:80px 6%}.about-grid{gap:6%}}@media(max-width:600px){header{height:78px;flex-wrap:wrap;align-content:center;gap:7px}.brand{font-size:12px}.brand span{font-size:8px}.languages{margin-left:auto}nav{order:3;width:100%;justify-content:center}nav a{font-size:10px;padding:4px 9px}.hero{height:auto;min-height:830px}.hero-word{top:25px;font-size:23vw;left:0;width:100%}.hero-portrait{height:470px;max-width:85%;left:50%;top:85px;bottom:auto}.hero-copy{bottom:60px;max-width:90%;left:6%}h1{font-size:43px;letter-spacing:-2px;margin-bottom:15px}.hero-copy p:not(.eyebrow){max-width:100%;font-size:12px}.hero-copy .eyebrow{margin-bottom:12px}.hero-bottom{font-size:8px;bottom:18px}.section-head{margin-bottom:35px}.about-grid,.projects{grid-template-columns:1fr;gap:20px}.about-grid p{font-size:14px}.about-note{font-size:32px}.periodic{grid-template-columns:repeat(3,1fr);gap:8px}.element{min-height:120px;padding:12px}.element b{font-size:30px}.entry{grid-template-columns:1fr;gap:12px;padding:24px 0}.entry h3{font-size:20px}.contact-bottom{flex-direction:column;gap:15px}.project-art{height:220px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
 
-  :root {
-    --bg: #faf8f5;
-    --ink: #1a1814;
-    --muted: #7a7470;
-    --subtle: #ede9e3;
-    --accent: #c45c2e;
-    --serif: 'Lora', Georgia, serif;
-    --sans: 'Inter', sans-serif;
-  }
+/* Homepage senza ritratto */
+@media(max-width:600px){.hero{min-height:560px}.hero-copy{bottom:75px}}
 
-  body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--sans);
-    font-size: 16px;
-    line-height: 1.7;
-  }
-
-  .wrap { max-width: 620px; margin: 0 auto; padding: 0 2rem; }
-
-  /* LANG SWITCHER */
-  .lang-switcher {
-    position: fixed;
-    top: 1.25rem;
-    right: 1.5rem;
-    display: flex;
-    gap: 4px;
-    z-index: 100;
-    background: var(--bg);
-    border: 1px solid var(--subtle);
-    border-radius: 100px;
-    padding: 4px;
-  }
-
-  .lang-btn {
-    font-family: var(--sans);
-    font-size: 12px;
-    font-weight: 500;
-    padding: 5px 11px;
-    border-radius: 100px;
-    border: none;
-    background: transparent;
-    color: var(--muted);
-    cursor: pointer;
-    transition: all 0.18s;
-    letter-spacing: 0.03em;
-  }
-
-  .lang-btn:hover { color: var(--ink); }
-  .lang-btn.active { background: var(--ink); color: var(--bg); }
-
-  /* HERO */
-  .hero { padding: 7rem 0 4rem; }
-
-  .hello {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 1.05rem;
-    color: var(--accent);
-    margin-bottom: 1.25rem;
-  }
-
-  .hero h1 {
-    font-family: var(--serif);
-    font-size: clamp(2.6rem, 7vw, 4rem);
-    font-weight: 600;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-text {
-    font-size: 1.05rem;
-    color: var(--muted);
-    max-width: 480px;
-    line-height: 1.85;
-    margin-bottom: 2.5rem;
-  }
-
-  .hero-text strong { color: var(--ink); font-weight: 500; }
-
-  .chips { display: flex; flex-wrap: wrap; gap: 10px; }
-
-  .chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    font-size: 13px;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 100px;
-    text-decoration: none;
-    transition: all 0.18s;
-  }
-
-  .chip-email { background: var(--ink); color: var(--bg); }
-  .chip-email:hover { background: #333; }
-  .chip-phone { background: var(--subtle); color: var(--ink); }
-  .chip-phone:hover { background: #e2ddd6; }
-  .chip-cv { border: 1px solid var(--accent); color: var(--accent); }
-  .chip-cv:hover { background: var(--accent); color: var(--bg); }
-
-  .divider { border: none; border-top: 1px solid var(--subtle); margin: 4rem 0; }
-
-  .block { margin-bottom: 4rem; }
-
-  .label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1.25rem;
-  }
-
-  .block p { font-size: 1rem; color: var(--muted); line-height: 1.9; margin-bottom: 1rem; }
-  .block p:last-child { margin-bottom: 0; }
-  .block p strong { color: var(--ink); font-weight: 500; }
-
-  /* SKILLS */
-  .skill-line {
-    display: flex;
-    align-items: baseline;
-    gap: 1rem;
-    padding: 0.9rem 0;
-    border-bottom: 1px solid var(--subtle);
-  }
-  .skill-line:first-of-type { border-top: 1px solid var(--subtle); }
-  .skill-cat { font-size: 13px; font-weight: 500; color: var(--ink); min-width: 130px; flex-shrink: 0; }
-  .skill-items { font-size: 13px; color: var(--muted); }
-
-  /* TIMELINE */
-  .tl-item { display: flex; gap: 1.5rem; padding-bottom: 2.5rem; position: relative; }
-  .tl-item::before {
-    content: ''; position: absolute; left: 4px; top: 18px; bottom: 0;
-    width: 1px; background: var(--subtle);
-  }
-  .tl-item:last-child::before { display: none; }
-  .tl-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); flex-shrink: 0; margin-top: 6px; position: relative; z-index: 1; }
-  .tl-dot.muted { background: #ccc; }
-  .tl-dot.future,
-  .tl-dot.current {
-    background: var(--bg);
-    border: 2px solid var(--accent);
-    width: 11px;
-    height: 11px;
-  }
-
-  /* AVATAR */
-  .avatar {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background: var(--subtle);
-    color: var(--accent);
-    font-family: var(--serif);
-    font-size: 1rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-    letter-spacing: 0.02em;
-  }
-
-  .hero-meta {
-    font-size: 12px;
-    color: var(--muted);
-    margin-bottom: 1rem;
-    font-family: var(--sans);
-  }
-  .tl-body { flex: 1; }
-  .tl-year { font-size: 12px; color: var(--muted); margin-bottom: 3px; font-weight: 500; }
-  .tl-title { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); margin-bottom: 2px; line-height: 1.3; }
-  .tl-where { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
-  .tl-desc { font-size: 13.5px; color: var(--muted); line-height: 1.7; }
-
-  /* LANG ROWS */
-  .lang-row { display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid var(--subtle); font-size: 14px; }
-  .lang-row:first-of-type { border-top: 1px solid var(--subtle); }
-  .lang-name { color: var(--ink); font-weight: 500; }
-  .lang-level { color: var(--muted); }
-
-  /* FOOTER */
-  footer { padding: 3rem 0 5rem; text-align: center; }
-  .footer-text { font-family: var(--serif); font-style: italic; font-size: 1rem; color: var(--muted); margin-bottom: 0.5rem; }
-  .footer-email { font-size: 13px; color: var(--accent); text-decoration: none; }
-  .footer-email:hover { text-decoration: underline; }
-  .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; }
-
-  /* ANIMATIONS */
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-  .hero  { animation: fadeIn 0.7s ease both; }
-  .block { animation: fadeIn 0.7s 0.1s ease both; }
-
-  @keyframes langSwitch { from { opacity: 0; } to { opacity: 1; } }
-  .wrap { animation: langSwitch 0.25s ease both; }
-
-  @media (max-width: 500px) {
-    .skill-line { flex-direction: column; gap: 4px; }
-    .skill-cat { min-width: unset; }
-    .lang-switcher { top: 0.75rem; right: 0.75rem; }
-  }
-</style>
-</head>
-<body>
-
-<!-- LANGUAGE SWITCHER -->
-<div class="lang-switcher">
-  <button class="lang-btn active" onclick="setLang('en')">EN</button>
-  <button class="lang-btn" onclick="setLang('it')">IT</button>
-  <button class="lang-btn" onclick="setLang('tr')">TR</button>
-</div>
-
-<div class="wrap" id="main">
-  <!-- content injected by JS -->
-</div>
-
-<script>
+</style></head><body><header><a class="brand" href="#home">Mustafa Özyürek<span>Software & AI</span></a><nav id="nav" aria-label="Navigation"></nav><div class="languages" aria-label="Language"><button data-lang="it">IT</button><button data-lang="en">EN</button><button data-lang="tr">TR</button></div></header><main id="main"></main><script>
 const t = {
   en: {
     hello: "Hi, I'm",
@@ -307,88 +85,22 @@ const t = {
   }
 };
 
-let currentLang = 'en';
 
-function setLang(lang) {
-  currentLang = lang;
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent === lang.toUpperCase()));
-  render(lang);
-}
+const ui={
+it:{nav:['Chi sono','Competenze','Progetti','Percorso','Contatti'],role:'Software engineer.<br><em>Curioso, per natura.</em>',intro:'Dal backend alle interfacce, con un interesse speciale per l’intelligenza artificiale.',location:'Svizzera',study:'Master in corso',cv:'Scarica CV',scroll:'SCORRI PER CONOSCERMI ↓',about:'Dietro il <em>codice.</em>',note:'La curiosità è il punto di partenza.<br><em>Costruire è il passo successivo.</em>',skills:'La tavola dei miei <em>strumenti.</em>',all:'Tutti',hint:'Seleziona uno strumento per esplorare le mie competenze.',projects:'Cose a cui ho <em>lavorato.</em>',projectTypes:['TESI DI BACHELOR · 2025–2026','STAGE INDUSTRIALE · 2025'],projectTitles:['Simulazione di veicoli autonomi','AI per i contenuti aziendali'],journey:'Formazione & <em>esperienza.</em>',contact:'Costruiamo qualcosa,<br><em>insieme.</em>',email:'Scrivimi',phone:'Chiamami',illustration:'Schema illustrativo',document:'Contenuti aziendali',interface:'Interfaccia SmartUI',footer:'Software, AI e nuove idee.',skillNotes:['Programmazione e sviluppo software','Interfacce web e componenti frontend','Sistemi backend, database e API','Versionamento e collaborazione con Git']},
+en:{nav:['About','Skills','Projects','Journey','Contact'],role:'Software engineer.<br><em>Curious, by nature.</em>',intro:'From backend systems to interfaces, with a special interest in artificial intelligence.',location:'Switzerland',study:'Current master’s',cv:'Download CV',scroll:'SCROLL TO GET TO KNOW ME ↓',about:'Behind the <em>code.</em>',note:'Curiosity is the starting point.<br><em>Building is the next step.</em>',skills:'The periodic table of my <em>tools.</em>',all:'All',hint:'Select a tool to explore my skills.',projects:'Things I’ve <em>worked on.</em>',projectTypes:['BACHELOR THESIS · 2025–2026','INDUSTRY INTERNSHIP · 2025'],projectTitles:['Autonomous vehicle simulation','AI for enterprise content'],journey:'Education & <em>experience.</em>',contact:'Let’s build something,<br><em>together.</em>',email:'Get in touch',phone:'Call me',illustration:'Illustrative diagram',document:'Enterprise content',interface:'SmartUI interface',footer:'Software, AI and new ideas.',skillNotes:['Programming and software development','Web interfaces and frontend components','Backend systems, databases and APIs','Version control and collaboration with Git']},
+tr:{nav:['Hakkımda','Beceriler','Projeler','Yolculuk','İletişim'],role:'Yazılım mühendisi.<br><em>Doğası gereği meraklı.</em>',intro:'Backend sistemlerinden arayüzlere, özellikle yapay zekaya ilgi duyuyorum.',location:'İsviçre',study:'Devam eden yüksek lisans',cv:'CV indir',scroll:'BENİ TANIMAK İÇİN KAYDIR ↓',about:'Kodun <em>arkasında.</em>',note:'Merak başlangıç noktasıdır.<br><em>Geliştirmek bir sonraki adımdır.</em>',skills:'Araçlarımın periyodik <em>tablosu.</em>',all:'Tümü',hint:'Becerilerimi keşfetmek için bir araç seç.',projects:'Üzerinde çalıştığım <em>projeler.</em>',projectTypes:['LİSANS TEZİ · 2025–2026','ENDÜSTRİ STAJI · 2025'],projectTitles:['Otonom araç simülasyonu','Kurumsal içerik için yapay zeka'],journey:'Eğitim & <em>deneyim.</em>',contact:'Birlikte bir şeyler<br><em>geliştirelim.</em>',email:'Bana yaz',phone:'Beni ara',illustration:'Açıklayıcı şema',document:'Kurumsal içerik',interface:'SmartUI arayüzü',footer:'Yazılım, yapay zeka ve yeni fikirler.',skillNotes:['Programlama ve yazılım geliştirme','Web arayüzleri ve frontend bileşenleri','Backend sistemleri, veritabanları ve API’ler','Git ile sürüm kontrolü ve iş birliği']}}
+const toolsList=[['Jv','Java',0],['Py','Python',0],['C','C',0],['C+','C++',0],['Js','JavaScript',0],['Sq','SQL',0],['Ht','HTML',1],['Cs','CSS',1],['Su','SmartUI',1],['Sp','SmartPages',1],['Sb','Spring Boot',2],['Nd','Node.js',2],['Mg','MongoDB',2],['Re','REST APIs',2],['Gt','Git',3]];
+const ids=['about','skills','projects','journey','contact'];let lang='it';try{lang=localStorage.getItem('portfolio-lang')||'it'}catch{}if(!ui[lang])lang='it';
+const sectionHead=(n,title)=>`<div class="section-head"><h2>${title}</h2><span class="section-number">0${n} / 05</span></div>`;
+function renderSite(){const l=t[lang],u=ui[lang],cats=[l.cat1,l.cat2,l.cat3,l.cat4];document.documentElement.lang=lang;document.getElementById('nav').innerHTML=ids.map((id,i)=>`<a href="#${id}">${u.nav[i]}</a>`).join('');document.querySelectorAll('[data-lang]').forEach(b=>{b.classList.toggle('active',b.dataset.lang===lang);b.setAttribute('aria-pressed',b.dataset.lang===lang)});const cv=lang==='it'?'CV_Mustafa_Özyürek_IT.pdf':'CV_Mustafa_Özyürek_EN.pdf';document.getElementById('main').innerHTML=`
+<section id="home" class="hero"><div class="hero-word" aria-hidden="true">MUSTAFA</div><div class="hero-copy"><p class="eyebrow">${u.location} · SOFTWARE & AI</p><h1>${u.role}</h1><p>${u.intro}</p><a class="pill dark" href="#projects">${u.nav[2]} <span>↗</span></a></div><aside class="hero-aside"><div class="meta">${u.study}<b>Software Engineering with AI</b>Università della Svizzera Italiana</div><div class="meta">BSc Computer Science<b>USI · 2026</b></div><a class="pill" href="${cv}" target="_blank" rel="noopener">${u.cv} ↓</a></aside><div class="hero-bottom"><span>${u.scroll}</span><span>MUSTAFA ÖZYÜREK · PORTFOLIO</span></div></section>
+<section id="about">${sectionHead(1,u.about)}<div class="about-grid"><div><p>${l.heroText}</p><div class="lang-list">${l.langs.map(([n,v])=>`<span>${n}<small>${v}</small></span>`).join('')}</div></div><div><p>${l.who1}</p><p>${l.who2}</p></div></div><div class="about-note">${u.note}</div></section>
+<section id="skills">${sectionHead(2,u.skills)}<div class="filters" role="group" aria-label="${u.nav[1]}">${[u.all,...cats].map((v,i)=>`<button data-filter="${i-1}" class="${i===0?'active':''}" aria-pressed="${i===0}">${v}</button>`).join('')}</div><div class="periodic">${toolsList.map(([sym,name,cat],i)=>`<button class="element" data-tool="${i}" data-cat="${cat}" aria-pressed="false"><small>${String(i+1).padStart(2,'0')} · ${cats[cat]}</small><b>${sym}</b><span>${name}</span></button>`).join('')}</div><div class="skill-detail" aria-live="polite">${u.hint}</div></section>
+<section id="projects">${sectionHead(3,u.projects)}<div class="projects"><article class="project"><div class="project-art" aria-hidden="true"><div class="road"><div class="car"></div></div><div class="road-tag">LLM → Scenario</div></div><div class="project-body"><small>${u.projectTypes[0]}</small><h3>${u.projectTitles[0]}</h3><p>${l.tl[2].desc}</p><div class="tags"><span>LLM</span><span>AI</span><span>Simulation</span></div></div></article><article class="project"><div class="project-art" aria-hidden="true"><div class="flow"><span>${u.document}</span><i></i><span class="ai">AI + REST API</span><i></i><span>${u.interface}</span></div></div><div class="project-body"><small>${u.projectTypes[1]}</small><h3>${u.projectTitles[1]}</h3><p>${l.tl[3].desc}</p><div class="tags"><span>JavaScript</span><span>SmartUI</span><span>Groovy</span></div></div></article></div><p class="skill-detail">${u.illustration}</p></section>
+<section id="journey">${sectionHead(4,u.journey)}<div class="timeline">${l.tl.map(x=>`<article class="entry"><div class="year">${x.current?'● ':''}${x.year}</div><div><h3>${x.title}</h3><small>${x.where}</small>${x.desc?`<p>${x.desc}</p>`:''}</div></article>`).join('')}</div></section>
+<section id="contact" class="contact"><p class="eyebrow">05 / 05 · ${u.nav[4]}</p><h2>${u.contact}</h2><div class="contact-actions"><a class="pill dark" href="mailto:mustafaaozyurek@hotmail.com">${u.email} ↗</a><a class="pill" href="${cv}" target="_blank" rel="noopener">${u.cv} ↓</a><a class="pill" href="tel:+41762462576">${u.phone} ↗</a></div><div class="contact-bottom"><span>© ${new Date().getFullYear()} Mustafa Özyürek · ${u.footer}</span><a href="mailto:mustafaaozyurek@hotmail.com">mustafaaozyurek@hotmail.com ↗</a><a href="https://www.instagram.com/_mustafaa_66/" target="_blank" rel="noopener">Instagram ↗</a></div></section>`;
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',x===b)});document.querySelectorAll('[data-tool]').forEach(x=>x.classList.toggle('dim',b.dataset.filter!=='-1'&&x.dataset.cat!==b.dataset.filter))}));document.querySelectorAll('[data-tool]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-tool]').forEach(x=>{x.classList.toggle('selected',x===b);x.setAttribute('aria-pressed',x===b)});const [,name,cat]=toolsList[+b.dataset.tool];document.querySelector('.skill-detail').textContent=`${name} — ${u.skillNotes[cat]}`}));if(window.sectionObserver)window.sectionObserver.disconnect();window.sectionObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('active',a.hash==='#'+e.target.id))}}),{rootMargin:'-15% 0px -55% 0px'});document.querySelectorAll('section').forEach(s=>window.sectionObserver.observe(s));}
+document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>{lang=b.dataset.lang;try{localStorage.setItem('portfolio-lang',lang)}catch{}renderSite()}));renderSite();
 
-function render(lang) {
-  const l = t[lang];
-
-  const timelineHTML = l.tl.map((item) => `
-    <div class="tl-item">
-      <div class="tl-dot${item.current ? ' current' : (item.future ? ' future' : (!item.desc && !item.where ? ' muted' : ''))}"></div>
-      <div class="tl-body">
-        <div class="tl-year">${item.year}</div>
-        <div class="tl-title">${item.title}</div>
-        ${item.where ? `<div class="tl-where">${item.where}</div>` : ''}
-        ${item.desc ? `<div class="tl-desc">${item.desc}</div>` : ''}
-      </div>
-    </div>
-  `).join('');
-
-  const langsHTML = l.langs.map(([name, level]) => `
-    <div class="lang-row">
-      <span class="lang-name">${name}</span>
-      <span class="lang-level">${level}</span>
-    </div>
-  `).join('');
-
-  document.getElementById('main').innerHTML = `
-    <div class="hero">
-      <div class="avatar">MÖ</div>
-      <div class="hero-meta">📍 Switzerland</div>
-      <p class="hello">${l.hello}</p>
-      <h1>Mustafa Özyürek</h1>
-      <p class="hero-text">${l.heroText}</p>
-      <div class="chips">
-        <a class="chip chip-email" href="mailto:mustafaaozyurek@hotmail.com">✉ mustafaaozyurek@hotmail.com</a>
-        <a class="chip chip-phone" href="tel:+41762462576">+41 76 246 25 76</a>
-        <a class="chip chip-cv" href="${l.cvFile}" target="_blank">${l.cvLabel}</a>
-      </div>
-    </div>
-
-    <hr class="divider">
-
-    <div class="block">
-      <div class="label">${l.whoLabel}</div>
-      <p>${l.who1}</p>
-      <p>${l.who2}</p>
-    </div>
-
-    <div class="block">
-      <div class="label">${l.skillsLabel}</div>
-      <div class="skill-line"><span class="skill-cat">${l.cat1}</span><span class="skill-items">Java, Python, C, C++, JavaScript, SQL</span></div>
-      <div class="skill-line"><span class="skill-cat">${l.cat2}</span><span class="skill-items">HTML, CSS, JavaScript, SmartUI / SmartPages</span></div>
-      <div class="skill-line"><span class="skill-cat">${l.cat3}</span><span class="skill-items">Spring Boot, Node.js, MongoDB, REST APIs</span></div>
-      <div class="skill-line"><span class="skill-cat">${l.cat4}</span><span class="skill-items">Git</span></div>
-    </div>
-
-    <div class="block">
-      <div class="label">${l.timelineLabel}</div>
-      ${timelineHTML}
-    </div>
-
-    <div class="block">
-      <div class="label">${l.langLabel}</div>
-      ${langsHTML}
-    </div>
-
-    <footer>
-      <p class="footer-text">${l.footerText}</p>
-      <div class="footer-links">
-        <a class="footer-email" href="mailto:mustafaaozyurek@hotmail.com">✉ mustafaaozyurek@hotmail.com</a>
-        <a class="footer-email" href="https://www.instagram.com/_mustafaa_66/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:5px"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>${l.igHandle}</a>
-        <a class="footer-email" href="tel:+41762462576">📞 ${l.phoneLabel}</a>
-      </div>
-    </footer>
-  `;
-}
-
-render('en');
-</script>
-</body>
-</html>
+</script></body></html>
